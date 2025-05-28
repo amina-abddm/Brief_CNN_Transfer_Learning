@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aminaabdm/Desktop/Brief_CNN_Transfer_Learning/mlruns/0/ec028651340c47e0aaf9107eb7524c4a/artifacts
+end_time: 1748444742125
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ec028651340c47e0aaf9107eb7524c4a
+run_name: unique-koi-310
+run_uuid: ec028651340c47e0aaf9107eb7524c4a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748444740136
+status: 4
+tags: []
+user_id: aminaabdm

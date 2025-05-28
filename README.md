@@ -102,11 +102,11 @@ Brief_CNN_Transfer_Learning/
 - Contient les modèles entraînés et leurs poids
 - Ce dossier facilite la version des modèles et la réutilisation directe en évaluation ou en production.
 
-| Fichiers                                      | Descriptions                                             |
-| ----------------------------------------------|---------------------------------------------------       |
-| cnn\_pneumonia.h5                             | Modèle CNN entraîné à partir de zéro (baseline)          |
-| transfer\_learning\_pneumonia.keras           | Modèle VGG16 avec transfert learning, adapté aux données |
-| vgg16\_weights\_tf\_dim\_ordering\_tf\_kernels\_notop.h5 (include\_top=False) | Poids pré-entraînés de VGG16 sans les couches finales    |
+| Fichiers                                                | Descriptions                                                 |
+| ----------------------------------------------------    |---------------------------------------------------           |
+| cnn\_pneumonia.h5                                       | Modèle CNN entraîné à partir de zéro (baseline)              |
+| transfer\_learning\_VGG16.keras                         | Modèle VGG16 avec transfert learning, adapté aux données     |
+| vgg16\_weights\_tf\_dim\_ordering\_tf\_kernels\_notop.h5| Poids pré-entraînés de VGG16 sans les couches finales        |
 
 #### .gitignore
 
@@ -145,11 +145,11 @@ Cette organisation facilite également le passage à une structure plus avancée
 
 ```bash
 
-mlflow ui --port 5001
+mlflow ui --port 5005
 
 ```
 
-➡️ Ouvrir dans un navigateur : http://127.0.0.1:5001
+➡️ Ouvrir dans un navigateur : http://127.0.0.1:5005
 
 ---
 
@@ -161,6 +161,15 @@ Cependant, les résultats sont moins bons pour les cas normaux : cela indique qu
 Grâce à une structure organisée et à l'utilisation de MLflow, ce projet pose une base solide pour évoluer vers un pipeline MLOps plus complet.
 
 ---
+Pour l'obtention de meilleure performance et une detection optimisée des cas NORMAL : 0, nous aurons pu paramétrer des réglages sur le dataset dans l'objectif d'agir d'améliorer l'étape de data préparation.
+
+| Propositions                      | Traduction technique                                       |
+| --------------------------------- | ---------------------------------------------------------- |
+| 🔁 "Retourner les images"         | **Data Augmentation** : flip horizontal/vertical, rotation |
+| 🖼️ "Recadrer les images"          | **Resize / crop** pour avoir des tailles homogènes         |
+| 🎨 "Mettre en couleur"            | **Utiliser les canaux RGB** au lieu du N\&B si pertinent   |
+| 🎯 "Présenter sous le même angle" | **Alignement spatial**, parfois via détection de landmarks |
+| 🧽 "Même pixelisation"            | **Normalisation des valeurs de pixels**, standardisation   |
 
 ### 💡 Étapes suivantes possibles
 

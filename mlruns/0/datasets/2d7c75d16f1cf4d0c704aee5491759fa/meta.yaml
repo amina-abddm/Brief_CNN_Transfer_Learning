@@ -1,0 +1,10 @@
+digest: 48e8055c
+name: dataset
+profile: '{"features_shape": [5216, 150, 150, 1], "features_size": 117360000, "features_nbytes":
+  469440000, "targets_shape": [5216], "targets_size": 5216, "targets_nbytes": 41728}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float32\", \"shape\": [-1, 150, 150, 1]}}]", "targets": "[{\"type\":
+  \"tensor\", \"tensor-spec\": {\"dtype\": \"int64\", \"shape\": [-1]}}]"}}'
+source: '{"tags": {"mlflow.user": "aminaabdm", "mlflow.source.name": "/Users/aminaabdm/Desktop/Brief_CNN_Transfer_Learning/.venv/lib/python3.12/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

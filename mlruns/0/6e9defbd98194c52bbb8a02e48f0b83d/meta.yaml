@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aminaabdm/Desktop/Brief_CNN_Transfer_Learning/mlruns/0/6e9defbd98194c52bbb8a02e48f0b83d/artifacts
+end_time: 1748444625693
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6e9defbd98194c52bbb8a02e48f0b83d
+run_name: transfer_learning_vgg16
+run_uuid: 6e9defbd98194c52bbb8a02e48f0b83d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748444617837
+status: 4
+tags: []
+user_id: aminaabdm

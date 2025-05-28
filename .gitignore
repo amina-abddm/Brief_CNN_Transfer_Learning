@@ -2,5 +2,7 @@
 # Ignorer les fichiers de workspace
 *.code-workspace
 
-# Ignorer les repertoires mlruns 
-mlruns/
+
+
+
+
