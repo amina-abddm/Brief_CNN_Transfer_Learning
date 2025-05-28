@@ -3,7 +3,7 @@
 *.code-workspace
 
 # Ignorer les fichiers de configuration mlruns
-mlruns 
+mlruns/
 
 
 
