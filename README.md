@@ -58,6 +58,24 @@ Brief_CNN_Transfer_Learning/
 ├── README.md
 └── requirements.txt
 
+```
+Brief_CNN_Transfer_Learning/
+
+├── .venv/
+├── data/chest_xray
+│   ├── test
+│   ├── train
+│   └── val
+├── mlruns/
+├── models/
+│   ├── cnn_pneumonia.h5  
+│   ├── transfer_learning_pneumonia.keras
+│   └── vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5    # Poids du modèle VGG16 pré-entraîné sans les couches top 
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
 ### 📂 Dossier et fichiers – Explication
 
 .venv/
@@ -83,11 +101,11 @@ models/
 - Contient les modèles entraînés et leurs poids
 - Ce dossier facilite la version des modèles et la réutilisation directe en évaluation ou en production.
 
-│ Fichiers                                          │  Descriptions                                            │ 
-│-------------------------------------------------- |----------------------------------------------------------│ 
-│ cnn_pneumonia.h5                                  │  Modèle CNN entraîné à partir de zéro (baseline)         │ 
-│ transfer_learning_pneumonia.keras                 │  Modèle VGG16 avec transfert learning, adapté aux données│ 
-│ vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5 │  Poids pré-entraînés de VGG16 sans les couches finales   │ (include_top=False)
+| Fichiers                                      | Descriptions                                             |
+| ----------------------------------------------|---------------------------------------------------       |
+| cnn\_pneumonia.h5                             | Modèle CNN entraîné à partir de zéro (baseline)          |
+| transfer\_learning\_pneumonia.keras           | Modèle VGG16 avec transfert learning, adapté aux données |
+| vgg16\_weights\_tf\_dim\_ordering\_tf\_kernels\_notop.h5 (include\_top=False) | Poids pré-entraînés de VGG16 sans les couches finales    |
 
 .gitignore
 
@@ -124,9 +142,10 @@ Cette organisation facilite également le passage à une structure plus avancée
 
 1. ### 📊 Suivi des expériences (MLflow)
 
-''' bash
+'''
+bash
 mlflow ui --port 5001
-
+'''
 ➡️ Pour lancer mlflow ui et suivre les runs, ouvrir dans un navigateur : http://127.0.0.1:5001
 
 ---
@@ -140,7 +159,7 @@ Grâce à une structure organisée et à l'utilisation de MLflow, ce projet pose
 
 ---
 
-## 💡 Étapes suivantes possibles
+### 💡 Étapes suivantes possibles
 
 - Ajout d’une API pour exposer le modèle (FastAPI)
 - Mise en production du pipeline via Docker
