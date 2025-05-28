@@ -1,0 +1,62 @@
+
+
+
+import mlflow
+import mlflow.keras
+import tensorflow as tf 
+
+# 👉 Cela crée une nouvelle session MLflow dans laquelle tout ce que tu logs 
+# (paramètres, métriques, modèle) est enregistré dans un run visible depuis l’interface web de MLflow.
+
+with mlflow.start_run():
+
+    # 1. Log des hyperparamètres
+    # 👉 Enregistrement des paramètres de ton expérience. Cela permettra de les comparer avec d’autres tests
+
+    mlflow.log_param("model_type", "CNN")
+    mlflow.log_param("epochs", 5)
+    mlflow.log_param("batch_size", 32)
+
+    # 2. 👉 Entrainement du CNN avec les données X_train, y_train. 
+    # Utilisation des paramètres définis, avec un class_weight pour corriger le déséquilibre des classes.
+
+    history = model.fit(
+        X_train, y_train,
+        epochs=5,
+        batch_size=32,
+        validation_data=(X_test, y_test),
+        class_weight=class_weights
+    )
+
+    # 3. 👉 Évaluation du modéle sur les données de test. 
+    # Récupération de deux métriques : 
+    # test_loss = l’erreur (fonction de perte) sur les données de test
+    # test_acc = l’accuracy sur les données de test
+    
+    test_loss, test_acc = model.evaluate(X_test, y_test)
+
+    # 4. Log des métriques
+    # 👉 Enregistre les performances de ton modèle, que tu pourras visualiser sur le tableau de bord MLflow.
+    mlflow.log_metric("test_accuracy", test_acc)
+    mlflow.log_metric("test_loss", test_loss)
+    # 5. Log du modèle
+    # 👉 Sauvegarde du modèle entraîné dans MLflow, avec son nom logique "cnn_model". Cela te permet de :
+    # Le recharger plus tard
+    # Le versionner automatiquement
+    # Le déployer si tu fais du MLOps
+    
+
+
+    # Exemple d’input : une image test au bon format
+    example_input = np.expand_dims(X_test[0], axis=0)
+
+    # Log du modèle avec exemple d'entrée
+    mlflow.keras.log_model(
+    keras_model=tf.keras.models.load_model("cnn_pneumonia.h5"),
+    )
+    
+
+# Pour visualiser les résultats, lancer le serveur MLflow avec la commande suivante dans ton terminal :
+# mlflow ui
+
+
