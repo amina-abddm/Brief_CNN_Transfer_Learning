@@ -23,20 +23,33 @@ Il intègre un pipeline MLOps simple pour :
 
 1. ### 📥 Cloner le dépôt
 
-''' bash
-git clone 'https://github.com/amina-abddm/Brief_CNN_Transfer_Learning.git'
-cd 'Biref_CNN_Transfer_Learning'
+```bash
+
+git clone https://github.com/amina-abddm/Brief_CNN_Transfer_Learning.git
+
+```bash
+
+cd Biref_CNN_Transfer_Learning
+
+```
 
 2. ### ✨ Créer et activer un environnement virtuel
 
-'''bash
+```bash
+
 python3 -m venv .venv
+
 source .venv/bin/activate
+
+```
 
 3. ### ⬇️ Installation des requirements
 
-''' bash
+```bash
+
 pip install -r Requirements.txt
+
+```
 
 ---
 
@@ -57,24 +70,6 @@ Brief_CNN_Transfer_Learning/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-
-```
-Brief_CNN_Transfer_Learning/
-
-├── .venv/
-├── data/chest_xray
-│   ├── test
-│   ├── train
-│   └── val
-├── mlruns/
-├── models/
-│   ├── cnn_pneumonia.h5  
-│   ├── transfer_learning_pneumonia.keras
-│   └── vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5    # Poids du modèle VGG16 pré-entraîné sans les couches top 
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
 
 ### 📂 Dossier et fichiers – Explication
 
@@ -142,11 +137,13 @@ Cette organisation facilite également le passage à une structure plus avancée
 
 1. ### 📊 Suivi des expériences (MLflow)
 
-'''
-bash
+```bash
+
 mlflow ui --port 5001
-'''
-➡️ Pour lancer mlflow ui et suivre les runs, ouvrir dans un navigateur : http://127.0.0.1:5001
+
+```
+
+➡️ Ouvrir dans un navigateur : http://127.0.0.1:5001
 
 ---
 
