@@ -27,6 +27,8 @@ Il intègre un pipeline MLOps simple pour :
 
 git clone https://github.com/amina-abddm/Brief_CNN_Transfer_Learning.git
 
+```
+
 ```bash
 
 cd Biref_CNN_Transfer_Learning
@@ -55,6 +57,8 @@ pip install -r Requirements.txt
 
 ## 🧱 Structure du projet – CNN Transfer Learning Classification (MLOps)
 
+```bash
+
 Brief_CNN_Transfer_Learning/
 
 ├── .venv/
@@ -66,10 +70,12 @@ Brief_CNN_Transfer_Learning/
 ├── models/
 │   ├── cnn_pneumonia.h5  
 │   ├── transfer_learning_pneumonia.keras
-│   └── vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5    # Poids du modèle VGG16 pré-entraîné sans les couches top 
+│   └── vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5  
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
+```
 
 ### 📂 Dossier et fichiers – Explication
 
